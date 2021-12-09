@@ -3,7 +3,7 @@ name: Docker Build
 on: [push]
 
 env:
-  DOCKER_REPOSITORY: abcfy2/docker-cli
+  DOCKER_REPOSITORY: abcfy2/aliyun-cli
 
 jobs:
   docker:

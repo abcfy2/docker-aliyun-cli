@@ -8,6 +8,8 @@ Weely update by github action [schedule](https://docs.github.com/en/actions/lear
 
 ## Supported tags
 
+- [3.0.100](https://github.com/aliyun/aliyun-cli/releases/tag/v3.0.100)
+
 And you may use `latest` tag to use the latest version.
 
 ## Usage

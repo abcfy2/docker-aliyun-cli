@@ -2,7 +2,7 @@ name: Weekly Update
 
 on:
   schedule:
-    - cron: "0 0 * * 1"
+    - cron: "*/5 * * * *"
 
 jobs:
   cron:
@@ -19,16 +19,20 @@ jobs:
           latest_tag="$(echo "${releases}" | jq -r '.[0].tag_name')"
           latest_html_url="$(echo "${releases}" | jq -r '.[0].html_url')"
           docker_tag="${latest_tag#v}"
+          echo "latest_tag = ${latest_tag}"
+          echo "latest_html_url = ${latest_html_url}"
+          echo "docker_tag = ${docker_tag}"
+          echo "git tags:"
+          git --no-pager tag
 
           if [ -z "$(git --no-pager tag -l "${latest_tag}")" ]; then
             sed -i "/^## Supported tags/a \\\n- [${docker_tag}](${latest_html_url})" README.md
             git config --local user.email "action@github.com"
             git config --local user.name "GitHub Action"
-            git commit -am "chore: add new tag" || true
+            git commit -am "doc: add new tag" || true
             git tag -f "${latest_tag}"
           fi
       - name: Push changes
-        if: github.event_name == 'push'
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.PAT }}

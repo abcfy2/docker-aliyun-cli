@@ -2,7 +2,7 @@
 
 ![Docker Build](https://github.com/abcfy2/docker-aliyun-cli/actions/workflows/docker_build.yml/badge.svg)
 [![Docker Pulls](https://img.shields.io/docker/pulls/abcfy2/aliyun-cli)](https://hub.docker.com/r/abcfy2/aliyun-cli)
-[![Latest Tag](https://img.shields.io/docker/v/abcfy2/docker-cli?sort=semver)](https://hub.docker.com/r/abcfy2/aliyun-cli/tags)
+[![Latest Tag](https://img.shields.io/docker/v/abcfy2/aliyun-cli?sort=semver)](https://hub.docker.com/r/abcfy2/aliyun-cli/tags)
 
 Since [aliyun-cli](https://github.com/aliyun/aliyun-cli) official [NO PLANS](https://github.com/aliyun/aliyun-cli/issues/257) to support official docker image.
 

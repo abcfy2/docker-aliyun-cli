@@ -12,6 +12,8 @@ Weekly update by github action [schedule](https://docs.github.com/en/actions/lea
 
 ## Supported tags
 
+- [3.0.100](https://github.com/aliyun/aliyun-cli/releases/tag/v3.0.100)
+
 And you may use `latest` tag to use the latest version.
 
 `Dockerfile` link from github: [abcfy2/docker-aliyun-cli](https://github.com/abcfy2/docker-aliyun-cli/blob/main/Dockerfile)

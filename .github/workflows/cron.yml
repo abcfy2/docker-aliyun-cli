@@ -26,7 +26,7 @@ jobs:
           git --no-pager tag
 
           if [ -z "$(git --no-pager tag -l "${latest_tag}")" ]; then
-            sed -i "1s@^## Supported tags@&\n- [${docker_tag}](${latest_html_url})@" README.md
+            sed -i "s@^## Supported tags@&\n- [${docker_tag}](${latest_html_url})@" README.md
             git config --local user.email "action@github.com"
             git config --local user.name "GitHub Action"
             git commit -am "doc: add new tag" || true

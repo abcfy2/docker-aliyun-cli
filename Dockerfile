@@ -1,9 +1,10 @@
 FROM alpine
 LABEL maintainer="Feng Yu<abcfy2@163.com>"
 
+RUN apk add --no-cache libc6-compat
+
 ARG ALIYUN_CLI_VERSION=latest
 
-RUN apk add --no-cache libc6-compat
 RUN case "$(uname -m)" in \
     x86_64) ARCH=amd64 ;; \
     aarch64) ARCH=arm64 ;; \

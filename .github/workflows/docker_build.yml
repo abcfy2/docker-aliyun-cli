@@ -38,6 +38,8 @@ jobs:
           build-args: |
             ALIYUN_CLI_VERSION=${{ env.DOCKER_TAG }}
           tags: ${{ env.DOCKER_REPOSITORY }}:${{ env.DOCKER_TAG }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
       - name: Docker Hub Description
         uses: peter-evans/dockerhub-description@v2
         if: ${{ github.ref == 'refs/heads/main' }}

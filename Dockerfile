@@ -1,7 +1,7 @@
 FROM alpine
 LABEL maintainer="Feng Yu<abcfy2@163.com>"
 
-RUN apk add --no-cache libc6-compat
+RUN apk add --no-cache libc6-compat bash jq
 
 ARG ALIYUN_CLI_VERSION=latest
 

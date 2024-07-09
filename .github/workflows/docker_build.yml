@@ -53,8 +53,8 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
       - name: Docker Hub Description
-        uses: peter-evans/dockerhub-description@v3
-        if: ${{ github.ref == 'refs/heads/main' }}
+        uses: peter-evans/dockerhub-description@v4
+        if: ${{ github.ref_name == 'main' }}
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}

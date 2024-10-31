@@ -10,7 +10,7 @@ So I create my own aliyun-cli docker image and stay updated to the latest aliyun
 
 Weekly update by github action [schedule](https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows#scheduled-events).
 
-This image also avaliable on GHCR: [abcfy2/docker-aliyun-cli](https://github.com/abcfy2/docker-aliyun-cli/pkgs/container/docker-aliyun-cli)
+This image also avaliable on GHCR: [abcfy2/aliyun-cli](https://github.com/abcfy2/docker-aliyun-cli/pkgs/container/aliyun-cli)
 
 ## Supported tags
 - [3.0.227](https://github.com/aliyun/aliyun-cli/releases/tag/v3.0.227)
@@ -23,7 +23,6 @@ This image also avaliable on GHCR: [abcfy2/docker-aliyun-cli](https://github.com
 - [3.0.215](https://github.com/aliyun/aliyun-cli/releases/tag/v3.0.215)
 - [3.0.214](https://github.com/aliyun/aliyun-cli/releases/tag/v3.0.214)
 - [3.0.213](https://github.com/aliyun/aliyun-cli/releases/tag/v3.0.213)
-
 - [3.0.210](https://github.com/aliyun/aliyun-cli/releases/tag/v3.0.210)
 - [3.0.208](https://github.com/aliyun/aliyun-cli/releases/tag/v3.0.208)
 - [3.0.207](https://github.com/aliyun/aliyun-cli/releases/tag/v3.0.207)

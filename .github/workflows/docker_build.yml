@@ -4,7 +4,7 @@ on: [push]
 
 env:
   DOCKER_REPOSITORY: abcfy2/aliyun-cli
-  GHCR_REPOSITORY: ghcr.io/${{ github.repository }}
+  GHCR_REPOSITORY: ghcr.io/${{ github.repository_owner }}/aliyun-cli
 
 jobs:
   docker:

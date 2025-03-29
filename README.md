@@ -13,6 +13,7 @@ Weekly update by github action [schedule](https://docs.github.com/en/actions/lea
 This image also avaliable on GHCR: [abcfy2/aliyun-cli](https://github.com/abcfy2/docker-aliyun-cli/pkgs/container/aliyun-cli)
 
 ## Supported tags
+- [3.0.264](https://github.com/aliyun/aliyun-cli/releases/tag/v3.0.264)
 - [3.0.260](https://github.com/aliyun/aliyun-cli/releases/tag/v3.0.260)
 - [3.0.259](https://github.com/aliyun/aliyun-cli/releases/tag/v3.0.259)
 - [3.0.256](https://github.com/aliyun/aliyun-cli/releases/tag/v3.0.256)

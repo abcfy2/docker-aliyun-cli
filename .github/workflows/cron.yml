@@ -16,7 +16,7 @@ jobs:
       - name: modify readme if necessary
         run: |
           releases="$(curl -s https://api.github.com/repos/aliyun/aliyun-cli/releases)"
-          latest_tag="$(echo "${releases}" | jq -r '.[0].tag_name')"
+          latest_tag="$(echo "${releases}" | jq -r '[.[] | select(.prerelease == false)][0].tag_name')"
           latest_html_url="$(echo "${releases}" | jq -r '.[0].html_url')"
           docker_tag="${latest_tag#v}"
           echo "latest_tag = ${latest_tag}"

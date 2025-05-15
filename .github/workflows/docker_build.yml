@@ -3,8 +3,9 @@ name: Docker Build
 on: [push]
 
 env:
-  DOCKER_REPOSITORY: abcfy2/aliyun-cli
+  DOCKER_REPOSITORY: ${{ github.repository_owner }}/aliyun-cli
   GHCR_REPOSITORY: ghcr.io/${{ github.repository_owner }}/aliyun-cli
+  QUAY_IO_REPOSITORY: quay.io/${{ github.repository_owner }}/aliyun-cli
 
 jobs:
   docker:
@@ -32,6 +33,12 @@ jobs:
           registry: ${{ env.GHCR_REPOSITORY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Login to Quay.io
+        uses: docker/login-action@v3
+        with:
+          registry: quay.io
+          username: ${{ secrets.QUAY_IO_USERNAME }}
+          password: ${{ secrets.QUAY_IO_PASSWORD }}
       - name: calc docker tag
         run: |
           if [ "${GITHUB_REF_NAME}" = "main" ]; then
@@ -49,7 +56,7 @@ jobs:
           platforms: linux/amd64,linux/arm64/v8
           build-args: |
             ALIYUN_CLI_VERSION=${{ env.DOCKER_TAG }}
-          tags: ${{ env.DOCKER_REPOSITORY }}:${{ env.DOCKER_TAG }},${{ env.GHCR_REPOSITORY }}:${{ env.DOCKER_TAG }}
+          tags: ${{ env.DOCKER_REPOSITORY }}:${{ env.DOCKER_TAG }},${{ env.GHCR_REPOSITORY }}:${{ env.DOCKER_TAG }},${{ env.QUAY_IO_REPOSITORY }}:${{ env.DOCKER_TAG }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
       - name: Docker Hub Description

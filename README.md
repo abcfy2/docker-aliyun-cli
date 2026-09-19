@@ -15,6 +15,7 @@ So I create my own aliyun-cli docker image and stay updated to the latest aliyun
 Weekly update by github action [schedule](https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows#scheduled-events).
 
 ## Supported tags
+- [3.5.1](https://github.com/aliyun/aliyun-cli/releases/tag/v3.5.1)
 - [3.5.0](https://github.com/aliyun/aliyun-cli/releases/tag/v3.5.0)
 - [3.4.11](https://github.com/aliyun/aliyun-cli/releases/tag/v3.4.11)
 - [3.4.10](https://github.com/aliyun/aliyun-cli/releases/tag/v3.4.10)
